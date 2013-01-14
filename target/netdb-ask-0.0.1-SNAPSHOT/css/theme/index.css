@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+body {
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+legend {
+	font-weight: bold;
+}
+
+input {
+	font-family: Arial,Helvetica,sans-serif;
+	border-color: #8E8F8F;
+}
+
+#logo{
+	text-shadow: 2px 2px 2px #767676;
+	font-size: 5em;
+}
+
+#logo-ask{
+	color: #ffffff;
+}
+
+#logo-rexxar{
+	color: #ffb000;
+	font-weight: 700;
+}
+
+/*
+#answer {
+	background: rgba(0%,0%,90%,0.05);
+}
+*/
+
+.footer {
+	color: #5E5F5F;
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>Ask Rexxar</title>
+	<link type="text/css" href="css/structure/index.css" rel="stylesheet" />
+	<link type="text/css" href="css/theme/index.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/comment.js"></script>
+	<script type="text/javascript" src="js/description.js"></script>
+	<script src="js/font/cufon-yui.js" type="text/javascript"></script>
+		<script src="js/font/Jellyka_Saint-Andrews_Queen.font.js" type="text/javascript"></script>
+		<script src="js/font/Last_King_Quest.font.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			Cufon.replace('#logo-ask', { 
+			                 fontFamily: 'Last King Quest',
+							 textShadow: '#fff -1px -1px, #333 1px 1px'});
+			Cufon.replace('#logo-rexxar', { 
+				             fontFamily: "Jellyka Saint-Andrew's Queen", 
+				             textShadow: '#fff -1px -1px, #333 1px 1px',
+				             fontWeight: 'bold'});
+			Cufon.replace('h2', { 
+				             fontFamily: 'Last King Quest',
+				             fontSize: '24px'});
+		</script>
+</head>
+<body>
+<div class="main-area">
+		<div id="logo"><span id="logo-ask">Ask</span><span>&nbsp;</span><span id="logo-rexxar"><b>Rexxar</b></span></div>
+		<div class = "askbar">
+			<input id="askinput" name="question" type="text" autofocus="autofocus"/><input id="askbtn" type="submit" value="&nbsp; Ask Me &nbsp;" />
+		</div>
+		<div id="answer-area">
+			<div id="wiki-loading" class="content-hidden"><img src="image/loading.gif" alt="loading" /></div>
+			<div id="wiki-answer"  class="content-hidden"></div>
+			<div id="custom-loading" class="content-hidden"><img src="image/loading.gif" alt="loading" /></div>
+			<div id="custom-answer" class="content-hidden"></div>
+			<form id="def-form" action="">
+				<fieldset>
+				<legend>Custom Definition</legend>
+					<textarea name="custom-input" class="inputarea" rows="2" cols="10"></textarea>
+					<input id="custom-inputbtn" type="submit" value=" Modify " />
+				</fieldset>
+			</form>
+		</div>
+		<div id="comment-area">
+			<form id="comment-form" action="">
+				<fieldset>
+				<legend>Comment</legend>
+					<input id="comment-input" name="comment" class="inputarea" type="text" />
+					<input id="comment-inputbtn" class="button" type="submit" value=" submit " />
+				</fieldset>
+			</form>
+			<div id="comment-list" class="content-hidden">
+			</div>
+		</div>
+		<br />
+		<div class="footer">A 2012 SoftwareStudio Assignment, by Chia-Hung "Rexxar" Lin, NTHU EECS Class of 2015.</div>
+	</div>
+</body>
+</html>

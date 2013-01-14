@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+body {
+	overflow-y: scroll;
+	font-size: 14px;
+	background-image: url('/image/background.jpg');
+	background-position: center top;
+}
+
+input {
+	font-size: 14px;
+	border-style: solid;
+	border-width: 1px;
+	margin: 0;
+	padding: 2px;
+}
+
+#logo {
+	text-align: center;
+	padding: 8px;
+}
+
+#logo-ask{
+	color: #ffffff;
+	font-size: 60px;
+}
+
+#logo-rexxar{
+	color: #ffb000;
+	font-size: 72px;
+}
+
+.content-hidden {
+	display: none;
+}
+
+.main-area {
+	float: center;
+	margin:0 auto;
+ 	margin-top: 200px;
+}
+
+.askbar {
+	text-align: center;
+	margin-top: 16px;
+}
+
+.inputarea {
+	width: 80%;
+	overflow: hidden;
+}
+
+.list-comment{
+	background-color: #ffffff;
+	border-style: outset;
+	position: relative;
+}
+
+.list-comment:hover{
+	background-color: #e1f4ff;
+}
+
+.list-comment img{
+	display: none;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+}
+
+.list-comment:hover img{
+	display: block;
+	cursor: pointer;
+}
+
+.list-comment-id {
+	display: none;
+}
+
+.list-comment-stamp , .custom-stamp{
+	text-align: right;
+	color: #dbdbdb;
+}
+
+.list-no-comment {
+	margin-top: 2%;
+	text-align: center;
+	font-style: italic;
+	font-weight: bold;
+}
+
+#custom-answer {
+	position: relative;
+}
+
+#custom-answer img{
+	display: none;
+	position: absolute;
+	top: 20px;
+	right: 4px;
+}
+
+#custom-answer:hover img{
+	display: block;
+	cursor: pointer;
+}
+
+#askinput {
+	width: 220px;
+}
+
+#askbtn {
+	margin-left: 8px;	
+}
+
+#answer-area{
+	margin-top: 20px;
+}
+
+#wiki-loading , #custom-loading{
+	/* img is an inline element in XHTML strict */
+	text-align: center;
+}
+
+#wiki-answer, #custom-answer {
+	/* centers answer div and sets its width to 50% */
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 16px;
+}
+
+#wiki-title, #custom-title{
+	font-size: 24px;
+}
+
+#custom-no-answer: {
+	text-align: center;
+	font-style: italic;
+	font-weight: bold;
+}
+
+#def-form, #comment-form {
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 2%;
+	text-align: center;
+	font-size: 16px;
+}
+
+#comment-list {
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 16px;
+}
+
+#answer-area , #comment-area{
+	background-color: #ffffff;
+	margin-left: 25%;
+	margin-right: 25%;
+	border-radius: 25px;
+}
+
+.footer {
+	text-align: center;
+	margin-top: 40px;
+}
