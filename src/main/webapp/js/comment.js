@@ -58,10 +58,6 @@ var initCommentBtn = function(){
 	var commentForm = document.getElementById('comment-form');
 
 	commentForm.onsubmit = function(){
-		if (commentTo == '') {
-			alert("You can't make a comment to nothing!");
-			return;
-		}
 		commentTo = document.getElementById('askinput').value;
 		ajaxRequest('PUT', encodeURI('comments/' + commentTo), {
 			'Content-Type': 'application/json;charset=UTF-8'

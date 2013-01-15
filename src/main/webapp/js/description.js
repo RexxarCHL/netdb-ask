@@ -26,7 +26,8 @@ var getDescription = function(){
 			if(ans == true){
 				ajaxRequest('DELETE', encodeURI('description/' + descriptionTo), null, null, 
 				function(status, headers, body) { // success callback
-					descriptionArea.innerHTML = 'Definition deleted.';
+					descriptionArea.innerHTML = '<h2>Custom Definition</h2><div class = "custom-del">Definition deleted.</div>';
+					Cufon.refresh('h2');
 				}, function(status, headers, body) {  // error callback
 					alert('error:[deleting description]' + status);
 				}, null);// run callbacks in global scope
@@ -34,12 +35,14 @@ var getDescription = function(){
 		}); 
 		
 		//show content
+		Cufon.refresh('h2');
 		removeClass(descriptionArea, 'content-hidden');
 		addClass(img, 'content-hidden');
 	}, function(status, headers, body){ //onerror: show error code
 		switch(status){
 			case 404:
 				descriptionArea.innerHTML = '<h2>Custom Definition</h2><div id = "custom-no-answer">No custom definition yet -- create one now!</div>';
+				Cufon.refresh('h2');
 				removeClass(descriptionArea, 'content-hidden');
 				addClass(img, 'content-hidden');
 				break;
@@ -55,12 +58,6 @@ var initDescriptionBtn = function(){
 	var descriptionForm = document.getElementById('def-form');
 
 	descriptionForm.onsubmit = function(){
-		var descriptionTo = document.getElementById('askinput').value;
-		if (descriptionTo == '') {
-			alert("You can't add a custom definition to nothing!");
-			return;
-		}
-		
 		var method;
 		
 		if(document.getElementsByClassName('custom-text')[0] != null){

@@ -40,6 +40,7 @@ public class CommentDao extends ModelAwareServlet<Comment> {
 		}
 		
 		Comment comment = getModel(req);
+		comment.setTitle(comment.getTitle().toLowerCase());
 		comment.setStamp(System.currentTimeMillis());
 		ObjectifyService.begin().put(comment);
 	}

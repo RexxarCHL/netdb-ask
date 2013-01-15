@@ -88,6 +88,11 @@ input {
 	font-weight: bold;
 }
 
+.custom-no-answer, .custom-del {
+	font-style: italic;
+	font-weight: bold;
+}
+
 #custom-answer {
 	position: relative;
 }

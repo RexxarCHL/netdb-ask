@@ -51,9 +51,10 @@ public class DescriptionDao extends ModelAwareServlet<Description>{
 			log.debug("Updating a domain object");
 		}
 		
-		String descriptionTo = req.getPathInfo().substring(1);
-		Description dbDescription = ObjectifyService.begin().query(Description.class).filter("title", descriptionTo).get();
-		
+		String descriptionTo = req.getPathInfo().substring(1).toLowerCase();
+		Query<Description> query = ObjectifyService.begin().query(Description.class).filter("title", descriptionTo);
+		log.debug("got query");
+		Description dbDescription = query.list().get(0);
 		dbDescription.setText(getModel(req).getText());
 		ObjectifyService.begin().put(dbDescription);
 	}
@@ -65,6 +66,7 @@ public class DescriptionDao extends ModelAwareServlet<Description>{
 		}
 		
 		Description description = getModel(req);
+		description.setTitle(description.getText().toLowerCase());
 		description.setStamp(System.currentTimeMillis());
 		ObjectifyService.begin().put(description);
 	}
@@ -75,8 +77,9 @@ public class DescriptionDao extends ModelAwareServlet<Description>{
 			log.debug("Deleting a domain object");
 		}
 		
-		String descriptionTo = req.getPathInfo().substring(1);
-		Long id = ObjectifyService.begin().query(Description.class).filter("title", descriptionTo).get().getId();
+		String descriptionTo = req.getPathInfo().substring(1).toLowerCase();
+		Query<Description> query = ObjectifyService.begin().query(Description.class).filter("title", descriptionTo);
+		Long id = query.list().get(0).getId();
 		ObjectifyService.begin().delete(Description.class, id);
 	}
 }
